@@ -1,0 +1,115 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .container {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2.5rem;
+    max-width: 480px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  .input-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .input-section input[type="number"] {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    width: 60%;
+    max-width: 280px;
+  }
+  
+  .input-section input[type="number"]:focus {
+    border-color: #5c6bc0;
+    box-shadow: 0 0 8px rgba(92, 107, 192, 0.4);
+  }
+  
+  button {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #5c6bc0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background: #3f51b5;
+    transform: translateY(-2px);
+  }
+  
+  .error {
+    color: #e53935;
+    font-weight: bold;
+  }
+  
+  .result {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #00695c;
+  }
+  
+  /* Spinner at bottom */
+  .css-art-fixed {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+  }
+  
+  .spinner-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #5c6bc0, #8e24aa, #26c6da, #5c6bc0);
+    animation: spin 4s linear infinite;
+    box-shadow: 0 0 10px rgba(140, 82, 255, 0.3), 0 0 20px rgba(26, 255, 249, 0.2);
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 500px) {
+    .input-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .input-section input[type="number"] {
+      width: 80%;
+    }
+  
+    button {
+      width: 80%;
+    }
+  }
+  
